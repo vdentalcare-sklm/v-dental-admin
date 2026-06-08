@@ -16,7 +16,7 @@ type PreviewRow = {
 
 const mockPreview: PreviewRow[] = [
   { id: 1, name: "Rahul Sharma", phone: "+91 9876543210", disease: "Root Canal", isValid: true },
-  { id: "2", name: "Priya Singh", phone: "9876543211", disease: "Teeth Whitening", isValid: true },
+  { id: 2, name: "Priya Singh", phone: "9876543211", disease: "Teeth Whitening", isValid: true },
   { id: 3, name: "Amit Kumar", phone: "", disease: "Consultation", isValid: false, error: "Missing Phone" },
   { id: 4, name: "Sneha Reddy", phone: "+91 9876543213", disease: "Implants", isValid: true },
   { id: 5, name: "Invalid User", phone: "123", disease: "Checkup", isValid: false, error: "Invalid Phone" },
