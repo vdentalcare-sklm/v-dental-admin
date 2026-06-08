@@ -8,16 +8,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-blue-600 text-white hover:bg-blue-700",
+        default: "bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md hover:-translate-y-0.5",
         outline:
-          "border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 aria-expanded:bg-slate-100 aria-expanded:text-slate-900 dark:border-slate-800 dark:bg-slate-900/30 dark:hover:bg-slate-900/50",
+          "border-2 border-slate-200 bg-white text-slate-900 hover:bg-slate-50 hover:border-slate-300 dark:border-slate-800 dark:bg-transparent dark:hover:bg-slate-800",
         secondary:
-          "bg-slate-100 text-slate-900 hover:bg-slate-200 aria-expanded:bg-slate-100 aria-expanded:text-slate-900",
+          "bg-white border-2 border-primary text-primary hover:bg-primary/5 shadow-sm hover:shadow",
+        success: "bg-success text-white hover:bg-success/90 shadow-sm hover:shadow-md hover:-translate-y-0.5",
         ghost:
           "hover:bg-slate-100 hover:text-slate-900 aria-expanded:bg-slate-100 aria-expanded:text-slate-900 dark:hover:bg-slate-800/50",
         destructive:
-          "bg-red-100 text-red-600 hover:bg-red-200 focus-visible:border-red-500/40 focus-visible:ring-red-500/20 dark:bg-red-500/20 dark:hover:bg-red-500/30 dark:focus-visible:ring-red-500/40",
-        link: "text-blue-600 underline-offset-4 hover:underline",
+          "bg-red-500 text-white hover:bg-red-600 focus-visible:border-red-500/40 focus-visible:ring-red-500/20 dark:bg-red-500 dark:hover:bg-red-600 dark:focus-visible:ring-red-500/40",
+        link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
         default:

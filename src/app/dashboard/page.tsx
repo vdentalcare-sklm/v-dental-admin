@@ -5,11 +5,11 @@ import { DataTable, Column } from "@/components/ui/DataTable";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const stats = [
-  { name: "Today's Appointments", value: "24", change: "+4", trend: "up", icon: Calendar, color: "text-blue-600", bg: "bg-blue-100" },
+  { name: "Today's Appointments", value: "24", change: "+4", trend: "up", icon: Calendar, color: "text-primary", bg: "bg-primary/10" },
   { name: "Pending Appointments", value: "12", change: "-2", trend: "down", icon: Clock, color: "text-amber-600", bg: "bg-amber-100" },
-  { name: "Completed Appointments", value: "156", change: "+12%", trend: "up", icon: CheckCircle2, color: "text-emerald-600", bg: "bg-emerald-100" },
-  { name: "Total Patients", value: "3,205", change: "+85", trend: "up", icon: Users, color: "text-indigo-600", bg: "bg-indigo-100" },
-  { name: "Active Campaigns", value: "3", change: "0", trend: "neutral", icon: Activity, color: "text-purple-600", bg: "bg-purple-100" },
+  { name: "Completed Appointments", value: "156", change: "+12%", trend: "up", icon: CheckCircle2, color: "text-teal-600", bg: "bg-teal-100" },
+  { name: "Total Patients", value: "3,205", change: "+85", trend: "up", icon: Users, color: "text-primary", bg: "bg-primary/10" },
+  { name: "Active Campaigns", value: "3", change: "0", trend: "neutral", icon: Activity, color: "text-primary", bg: "bg-primary/10" },
   { name: "Messages Delivered", value: "12.5k", change: "+2.1k", trend: "up", icon: MessageSquare, color: "text-success", bg: "bg-success/20" },
 ];
 
@@ -40,7 +40,7 @@ export default function Dashboard() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {stats.map((stat) => (
-          <div key={stat.name} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
+          <div key={stat.name} className="bg-gradient-to-br from-white to-primary/5 p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
             <div className={`w-12 h-12 ${stat.bg} rounded-full flex items-center justify-center shrink-0`}>
               <stat.icon className={`w-6 h-6 ${stat.color}`} />
             </div>
@@ -64,8 +64,8 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Upcoming Appointments */}
-        <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-          <div className="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+          <div className="px-6 py-4 border-b border-primary/10 flex justify-between items-center bg-gradient-to-r from-primary/5 to-transparent">
             <h2 className="font-bold text-slate-900">Upcoming Appointments</h2>
             <button className="text-sm text-primary font-medium hover:underline">View All</button>
           </div>
@@ -84,8 +84,8 @@ export default function Dashboard() {
         </div>
 
         {/* Recent Patients */}
-        <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-          <div className="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+          <div className="px-6 py-4 border-b border-primary/10 flex justify-between items-center bg-gradient-to-r from-primary/5 to-transparent">
             <h2 className="font-bold text-slate-900">Recently Active Patients</h2>
             <button className="text-sm text-primary font-medium hover:underline">View All</button>
           </div>

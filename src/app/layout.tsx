@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "V Dental Admin Dashboard",
-  description: "Admin panel for V Dental Care",
+  title: "V Dental CRM",
+  description: "Administrative dashboard for V Dental Care",
 };
 
 export default function RootLayout({

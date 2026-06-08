@@ -11,18 +11,20 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
   
   let styles = "bg-slate-100 text-slate-600 border-slate-200"; // default gray
   
-  if (["confirmed", "completed", "delivered", "success"].includes(normalized)) {
+  if (["confirmed", "delivered", "success"].includes(normalized)) {
     styles = "bg-success/10 text-success border-success/20";
   } else if (["pending", "running"].includes(normalized)) {
-    styles = "bg-amber-100 text-amber-700 border-amber-200";
+    styles = "bg-amber-50 text-amber-700 border-amber-200";
+  } else if (["completed"].includes(normalized)) {
+    styles = "bg-teal-50 text-teal-700 border-teal-200";
   } else if (["cancelled", "failed", "blocked", "invalid"].includes(normalized)) {
-    styles = "bg-red-100 text-red-700 border-red-200";
+    styles = "bg-red-50 text-red-700 border-red-200";
   }
 
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border",
+        "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border shadow-sm",
         styles,
         className
       )}

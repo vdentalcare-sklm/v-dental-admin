@@ -21,7 +21,7 @@ export default function SettingsPage() {
           <h1 className="text-2xl font-bold text-slate-900">Platform Settings</h1>
           <p className="text-sm text-slate-500">Manage clinic operations, branding, and preferences.</p>
         </div>
-        <button className="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 shadow-sm">
+        <button className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 flex items-center gap-2 shadow-sm">
           <Save className="w-4 h-4" />
           Save Changes
         </button>
@@ -35,10 +35,10 @@ export default function SettingsPage() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-3 text-left text-sm font-medium transition-colors border-l-4 ${
+                className={`px-4 py-3 text-left text-sm font-medium transition-all duration-200 border-l-4 ${
                   activeTab === tab
-                    ? "border-primary bg-primary/10 text-primary"
-                    : "border-transparent text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                    ? "border-primary bg-gradient-to-r from-primary/10 to-transparent text-primary shadow-[inset_4px_0_0_var(--color-primary)] shadow-primary/5"
+                    : "border-transparent text-slate-600 hover:bg-slate-50 hover:text-primary"
                 }`}
               >
                 {tab}
@@ -55,7 +55,7 @@ export default function SettingsPage() {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">Clinic Name</label>
-                  <input type="text" className="w-full border border-slate-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary outline-none" defaultValue="V Dental Care" />
+                  <input type="text" className="w-full border border-slate-200 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" defaultValue="V Dental Care" />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -63,14 +63,14 @@ export default function SettingsPage() {
                     <label className="text-sm font-medium text-slate-700">Primary Phone</label>
                     <div className="relative">
                       <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                      <input type="tel" className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary outline-none" defaultValue="+91 9876543210" />
+                      <input type="tel" className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2.5 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" defaultValue="+91 9876543210" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">Email Address</label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                      <input type="email" className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary outline-none" defaultValue="contact@vdentalcare.com" />
+                      <input type="email" className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2.5 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" defaultValue="contact@vdentalcare.com" />
                     </div>
                   </div>
                 </div>
@@ -79,7 +79,7 @@ export default function SettingsPage() {
                   <label className="text-sm font-medium text-slate-700">Headquarters Address</label>
                   <div className="relative">
                     <MapPin className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
-                    <textarea rows={3} className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary outline-none" defaultValue="12-34, Main Road, Visakhapatnam, Andhra Pradesh 530001"></textarea>
+                    <textarea rows={3} className="w-full border border-slate-200 rounded-lg pl-10 pr-4 py-2.5 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" defaultValue="12-34, Main Road, Visakhapatnam, Andhra Pradesh 530001"></textarea>
                   </div>
                 </div>
               </div>

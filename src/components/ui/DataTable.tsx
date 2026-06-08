@@ -26,7 +26,7 @@ export function DataTable<T>({ data, columns, onRowClick, className, pagination 
     <div className={cn("bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden", className)}>
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm text-slate-600">
-          <thead className="bg-slate-50 text-slate-500 font-medium border-b border-slate-200">
+          <thead className="bg-primary/5 text-primary font-semibold border-b-2 border-primary/10">
             <tr>
               {columns.map((col, index) => (
                 <th key={index} className={cn("py-3 px-4 font-semibold whitespace-nowrap", col.className)}>
@@ -48,8 +48,8 @@ export function DataTable<T>({ data, columns, onRowClick, className, pagination 
                   key={rowIndex} 
                   onClick={() => onRowClick?.(row)}
                   className={cn(
-                    "border-b border-slate-100 last:border-0 transition-colors",
-                    onRowClick ? "cursor-pointer hover:bg-slate-50" : "hover:bg-slate-50/50"
+                    "border-b border-slate-100 last:border-0 transition-all duration-200",
+                    onRowClick ? "cursor-pointer hover:bg-slate-50 hover:shadow-[inset_4px_0_0_var(--color-primary)]" : "hover:bg-slate-50 hover:shadow-[inset_4px_0_0_var(--color-primary)]"
                   )}
                 >
                   {columns.map((col, colIndex) => (
